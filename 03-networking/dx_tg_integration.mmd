@@ -1,0 +1,28 @@
+graph LR
+    subgraph "On-Premises Network"
+        A[Your Network]
+    end
+    
+    subgraph "AWS Cloud"
+        subgraph "Direct Connect"
+            B[Direct Connect Connection] --> C(DX Gateway)
+        end
+        
+        subgraph "Transit Gateway"
+            D[Transit Gateway]
+        end
+        
+        E[Transit VIF] --> C
+        C -. Transit Gateway Attachment .-> D
+        
+        subgraph "VPC"
+            F[VPC] --> D
+        end
+    end
+    
+    A --> B
+    
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px;
+    classDef connection fill:#f9f9f9,stroke:#000000,stroke-width:2px;
+    class C,D fill:#f0f8ff
+    class B fill:#f9f9f9

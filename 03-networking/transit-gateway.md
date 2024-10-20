@@ -7,6 +7,7 @@
     - VPC attachments
     - Site-to-Site VPN attachments
     - Direct Connect Gateway attachments
+[diagram](./dx_tg_integration.mmd)    
 - Attachments are configured in each subnet of the connected VPCs
 - We can also peer transit gateways across cross regions and/or cross accounts
 - We can also attach transit gateways to the DX connections
