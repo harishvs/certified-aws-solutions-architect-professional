@@ -14,6 +14,7 @@
 - **DNS Zone**: a part of the DNS database (example: amazon.com)
 - **Zone file**: it is a physical database for a zone, contains all the DNS information for a particular domain
 - **DNS Name server**: a server which hosts the zone files
+[diagram](./dns_terminology.mmd)
 
 ## DNS Root
 
