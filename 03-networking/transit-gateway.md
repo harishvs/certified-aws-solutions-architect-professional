@@ -7,7 +7,7 @@
     - VPC attachments
     - Site-to-Site VPN attachments
     - Direct Connect Gateway attachments
-[diagram](./dx_tg_integration.mmd)    
+
 - Attachments are configured in each subnet of the connected VPCs
 - We can also peer transit gateways across cross regions and/or cross accounts
 - We can also attach transit gateways to the DX connections
@@ -24,6 +24,7 @@
     - A Transit VIF is required which goes through a DX Gateway
     - The DX Gateway can be attached to the Transit Gateway with a Transit Gateway Attachment
     - 1 DX Gateway can be attached to 3 Transit Gateways
+    [diagram](./dx_tg_integration.mmd)    
 - Transit Gateway has a default route table which is populated from the attachments:
     - For the VPCs we have the CIDR ranges of these VPCs
     - For VPNs we have the routes learned via BGP
