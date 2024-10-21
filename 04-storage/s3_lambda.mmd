@@ -1,0 +1,8 @@
+graph LR
+    A[Application] --> B(Object Lambda Access Point)
+    B --> C{S3 Access Point?}
+    C -- Yes --> D[Lambda Function]
+    D --> E[S3 Bucket]
+    C -- No --> E
+    E --> F(Data)
+    F --> A
